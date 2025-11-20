@@ -95,7 +95,7 @@ body {
 }
 
 .imagen {
-  width: 100%;
+  width: auto;
   height: 150px;
   background-color: #9bbd99;
   border-radius: 5px;
@@ -130,4 +130,52 @@ footer {
 .imagen-header {
   border-radius: 15px;
   margin:20px;
+}
+
+.titulo1 {
+  padding: 20px;
+  margin-top: -30px;
+  margin-bottom: -35px;
+}
+
+
+.titulo1 h1 {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.imagen-ecotip {
+  border-radius: 15px;
+  margin:20px;
+}
+
+.tarjeta-tips {
+  display: flex;
+  align-items: center;
+  background: #6b8e6b;
+  border-radius: 12px;
+  padding: 30px; 
+  gap: 15px;
+  width: calc(100% - 40px);
+  max-width: 350px;
+  height: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 0 20px 20px 20px;
+}
+
+.img-tarjeta-tips {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.tarjeta-contenido h2 {
+  margin: 0;  
+  font-size: 18px;
+}
+
+.tarjeta-contenido p {
+  margin: 5px 0 0;
+  font-size: 14px;
 }
