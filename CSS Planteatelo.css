@@ -151,24 +151,35 @@ footer {
 
 .tarjeta-tips {
   display: flex;
+  flex-direction: row;          /* horizontal por defecto */
+  flex-wrap: wrap;              /* permite que los elementos internos bajen en móvil */
   align-items: center;
   background: #6b8e6b;
   border-radius: 12px;
-  padding: 30px; 
+  padding: 20px;                /* un poco más pequeño en móviles */
   gap: 15px;
-  width: calc(100% - 40px);
-  max-width: 350px;
-  height: 150px;
+
+  width: 100%;                  /* ocupa todo el contenedor */
+  max-width: 90%;              /* sin límite de tamaño */
+  height: auto;                 /* se ajusta al contenido */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin: 0 20px 20px 20px;
+  margin: 20px auto;            /* centrado horizontal con espacio arriba/abajo */
 }
 
-.img-tarjeta-tips {
-  width: 150px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 10px;
+@media (max-width: 768px) {
+  .tarjeta-tips {
+    flex-direction: column;      /* los elementos internos apilan en vertical */
+    text-align: center;          /* centra texto e imagen */
+    padding: 15px;
+  }
+
+  .img-tarjeta-tips {
+    width: 70%;                 /* la imagen ocupa todo el ancho disponible */
+    height: auto;                /* mantiene proporción */
+    margin-bottom: 10px;
+  }
 }
+
 
 .tarjeta-contenido h2 {
   margin: 0;  
@@ -178,4 +189,89 @@ footer {
 .tarjeta-contenido p {
   margin: 5px 0 0;
   font-size: 14px;
+}
+
+.tc-imagen{
+  flex: 0 0 200px; 
+  height: 265px;
+  border-radius: 10px;
+  text-align: center;
+  scroll-snap-align: center;
+  padding: 10px;
+  transition: transform 0.3s;
+  object-fit: cover;
+
+}
+
+.noticias-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+.noticias-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.noticias-header {
+  display: flex;
+  align-items: center;  
+  justify-content: space-between; 
+  margin-bottom: 20px; 
+}
+
+.btn {
+    background: #000;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.cards-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #c2d5c4;
+}
+
+.thumb {
+    width: 100%;
+    height: 120px;
+    background: #b4d7bf;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.card p {
+    font-size: 12px;
+    color: #555;
+}
+
+.noticias-header .btn {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.justificado {
+  text-align: center;
 }
