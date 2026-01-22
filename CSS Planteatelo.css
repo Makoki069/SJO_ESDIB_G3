@@ -151,31 +151,31 @@ footer {
 
 .tarjeta-tips {
   display: flex;
-  flex-direction: row;          /* horizontal por defecto */
-  flex-wrap: wrap;              /* permite que los elementos internos bajen en móvil */
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   background: #6b8e6b;
   border-radius: 12px;
-  padding: 20px;                /* un poco más pequeño en móviles */
+  padding: 20px;
   gap: 15px;
 
-  width: 100%;                  /* ocupa todo el contenedor */
-  max-width: 90%;              /* sin límite de tamaño */
-  height: auto;                 /* se ajusta al contenido */
+  width: 100%;
+  max-width: 90%;
+  height: auto;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin: 20px auto;            /* centrado horizontal con espacio arriba/abajo */
+  margin: 20px auto;
 }
 
 @media (max-width: 768px) {
   .tarjeta-tips {
-    flex-direction: column;      /* los elementos internos apilan en vertical */
-    text-align: center;          /* centra texto e imagen */
+    flex-direction: column;
+    text-align: center;
     padding: 15px;
   }
 
   .img-tarjeta-tips {
-    width: 70%;                 /* la imagen ocupa todo el ancho disponible */
-    height: auto;                /* mantiene proporción */
+    width: 70%;
+    height: auto;
     margin-bottom: 10px;
   }
 }
@@ -274,4 +274,92 @@ footer {
 
 .justificado {
   text-align: center;
+}
+
+.link-noticia {
+   text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.tarjeta-fuentes {
+  display: flex;
+  align-items:flex-start;
+  background: #6b8e6b;
+  border-radius: 12px;
+  padding: 30px; 
+  gap: 15px;
+  width: calc(100% - 40px);
+  max-width: 1000px;
+  height: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin:20px 20px 20px 20px;
+}
+
+.check {
+  display: flex;
+  flex-direction: column;
+  background: #6b8e6b;
+  border-radius: 12px;
+  padding: 20px;
+  gap: 20px;
+  max-width: 800px;   
+  margin: 20px auto;
+}
+
+.escribir {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  display: block;
+  box-sizing:border-box;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+  .nav ul {
+    gap: 6px;
+  }
+
+  .titulo1 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .check {
+    margin: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .item {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .item .escribir {
+  flex: 1;
+  min-width: 0;
+}
+
+  .marcar {
+    transform: scale(1.5);
+  }
+
+
+.marcar {
+  accent-color:#6b8e6b;
+  border: 2px white;
+  transform: scale(2);
+  margin: 5px;
+  align-self: center;
 }
