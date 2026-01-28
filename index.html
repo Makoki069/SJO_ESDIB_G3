@@ -1,71 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plantéatelo</title>
   <link rel="stylesheet" href="CSS Planteatelo.css">
+  <link rel="stylesheet" href="mobile-orientation.css">
 </head>
+
+  <link rel="icon" href="logo/Captura_de_pantalla_2026-01-28_201021-removebg-preview.png" type="image/png">
 <body>
   <header class="header">
-    <div class="logo">Plantéatelo</div>
+    <a href="index.html" class="logo"><img src="img/logo.png"></a>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="overlay"></div>
     <nav class="nav">
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="Ecotips.html">Ecotip</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="Diadia.html">Día a día</a></li>
+        <li><a href="ecotip.html">Ecotip</a></li>
+        <li><a href="formulario.html">Publicar Noticia</a></li>
+        <li><a href="dia-a-dia.html">Día a día</a></li>
         <li><a href="checklist.html">Checklist</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="fuentes.html">Fuentes</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html" id="nav-login-btn">Login</a></li>
       </ul>
     </nav>
   </header>
 
-  <img class="imagen-header" src="C:\Users\Usuario\OneDrive\Escritorio\fotos planteatelo\imagen1.png"alt="imagen arboles inicial" width="410">
+  <img class="imagen-header" src="img/IMG_1b_editada.jpg" alt="imagen arboles inicial">
 
   <section class="welcome">
-    <h1 class="justificado">¡Bienvenido!</h1>
-    <p class="justificado">Este un espacio pensado para inspirarte a cuidar el planeta desde lo cotidiano. Cada día compartimos consejos sencillos
-    y prácticos para llevar una vida más respetuosa con el medio ambiente, demostrando que pequeños cambios en nuestros hábitos
-    pueden generar un gran impacto. </p>
-
-    <p class="justificado">Aquí encontrarás ideas claras y accesibles para consumir de forma responsable, reducir residuos 
-    y reconectar con un estilo de vida más consciente y sostenible.</p>
+    <h1>¡Bienvenido!</h1>
+    <p>Planteátelo es un espacio pensado para inspirarte a cuidar el planeta desde lo cotidiano. Cada día compartimos
+      consejos sencillos y prácticos para llevar una vida más respetuosa con el medio ambiente, demostrando que pequeños
+      cambios en nuestros hábitos pueden generar un gran impacto. Aquí encontrarás ideas claras y accesibles para
+      consumir de forma responsable, reducir residuos y reconectar con un estilo de vida más consciente y sostenible.
+    </p>
 
     <section class="carrusel">
       <div class="contenedor-carrusel">
         <div class="card">
-          <img src="" class="tc-imagen">
+          <img src="img/TARJETAS-01.png" class="tc-imagen">
         </div>
 
         <div class="card">
-        <h3>tarjeta 2</h3>
+          <img src="img/TARJETAS-02.png" class="tc-imagen">
         </div>
 
         <div class="card">
-          <h3>tarjeta 3</h3>
+          <img src="img/TARJETAS-03.png" class="tc-imagen">
         </div>
 
         <div class="card">
-          <h3>tarjeta 4</h3>
+          <img src="img/TARJETAS-04.png" class="tc-imagen">
         </div>
 
         <div class="card">
-          <h3>tarjeta 5</h3>
+          <img src="img/TARJETAS-05.png" class="tc-imagen">
         </div>
 
-         <div class="card">
-          <h3>tarjeta 6</h3>
+        <div class="card">
+          <img src="img/TARJETAS-06.png" class="tc-imagen">
         </div>
 
-         <div class="card">
-          <h3>tarjeta 7</h3>
+        <div class="card">
+          <img src="img/TARJETAS-07.png" class="tc-imagen">
         </div>
 
-         <div class="card">
-          <h3>tarjeta 8</h3>
+        <div class="card">
+          <img src="img/TARJETAS-08.png" class="tc-imagen">
         </div>
 
       </div>
@@ -73,14 +83,15 @@
   </section>
 
   <section class="extra">
-    <h2>Encabezado de sección</h2>
-    <p>Cuerpo del texto para lo que desees ampliar sobre el tema principal.</p>
-    <button class="cta">SUSCRÍBETE</button>
+    <h2>ÚNETE A LA COMUNIDAD</h2>
+    <p>Suscríbete y mantente al día de las noticias que importan</p>
+    <a href="suscripcion.html" class="cta">SUSCRÍBETE</a>
   </section>
 
   <footer>
-    <p>(Call to action)</p>
+    <p>Plantéatelo: piensa hoy, cuida mañana.</p>
   </footer>
-
+  <script src="app.js"></script>
 </body>
+
 </html>

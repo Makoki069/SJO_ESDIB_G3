@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main_content {
+    width: 100%;
+}
+
+
+.main_container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+
+.formulario {
+    background: white;
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    margin-bottom: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+form#alta_pet {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input_container label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2d6a4f;
+    letter-spacing: 0.3px;
+}
+
+.input_container input[type="text"],
+.input_container input[type="password"],
+.input_container input[type="date"],
+.input_container textarea,
+.input_container select {
+    padding: 0.9rem 1rem;
+    border: 2px solid #d8f3dc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: #f7fdf9;
+}
+
+.input_container input[type="text"]:focus,
+.input_container input[type="password"]:focus,
+.input_container input[type="date"]:focus,
+.input_container textarea:focus,
+.input_container select:focus {
+    outline: none;
+    border-color: #40916c;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(64, 145, 108, 0.15);
+}
+
+.input_container textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.input_container input[type="file"] {
+    padding: 0.7rem;
+    border: 2px solid #b7e4c7;
+    border-radius: 6px;
+    background: #f7fdf9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input_container input[type="file"]:hover {
+    border-color: #40916c;
+    background: #d8f3dc;
+}
+
+
+.input_container_button {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.input_container_button button {
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+#upload-button {
+    background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%);
+    color: white;
+    flex: 1;
+}
+
+#upload-button:hover {
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(45, 106, 79, 0.4);
+}
+
+#upload-button:active {
+    transform: translateY(0);
+}
+
+#upload-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#cancel-edit {
+    background: #6c757d;
+    color: white;
+}
+
+#cancel-edit:hover {
+    background: #495057;
+    transform: translateY(-2px);
+}
+
+
+h2 {
+    font-size: 1.8rem;
+    color: white;
+    margin: 3rem 0 1.5rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#pets-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pet-item {
+    background: white;
+    border-radius: 8px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid #40916c;
+}
+
+.pet-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    border-left-color: #2d6a4f;
+}
+
+.pet-header {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1b4332;
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.news-meta {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.news-content {
+    color: #495057;
+    line-height: 1.6;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f7fdf9;
+    border-radius: 5px;
+    border-left: 3px solid #b7e4c7;
+}
+
+.pet-actions {
+    display: flex;
+    gap: 0.8rem;
+    margin: 1.2rem 0;
+}
+
+.pet-actions button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pet-actions button:first-child {
+    background: linear-gradient(135deg, #52b788 0%, #40916c 100%);
+    color: white;
+}
+
+.pet-actions button:first-child:hover {
+    background: linear-gradient(135deg, #40916c 0%, #2d6a4f 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(64, 145, 108, 0.4);
+}
+
+.pet-actions button:last-child {
+    background: linear-gradient(135deg, #e63946 0%, #d62828 100%);
+    color: white;
+}
+
+.pet-actions button:last-child:hover {
+    background: linear-gradient(135deg, #d62828 0%, #c1121f 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+}
+
+/* Galería de fotos */
+.pet-photos {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+    border-top: 2px solid #d8f3dc;
+}
+
+.pet-photos img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 3px solid #d8f3dc;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.pet-photos img:hover {
+    transform: scale(1.05);
+    border-color: #40916c;
+    box-shadow: 0 4px 15px rgba(64, 145, 108, 0.3);
+}
+
+.muted {
+    color: #95d5b2;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .formulario {
+        padding: 1.25rem;
+    }
+
+    .header_contenido {
+        padding: 0 1rem;
+    }
+
+    .main_container {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+
+    .input_container input[type="text"],
+    .input_container input[type="date"],
+    .input_container textarea,
+    .input_container select {
+        padding: 0.8rem;
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+    }
+
+    .input_container_button {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .input_container_button button {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    .pet-photos img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .pet-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pet-actions {
+        flex-direction: column;
+    }
+
+    .pet-actions button {
+        width: 100%;
+    }
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pet-item {
+    animation: fadeIn 0.4s ease-out;
+}

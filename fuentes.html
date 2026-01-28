@@ -1,37 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plantéatelo</title>
-  <link rel="stylesheet" href="CSS Planteatelo.css">
+    <meta charset="UTF-8">
+    <link rel="icon" href="logo/Captura_de_pantalla_2026-01-28_201021-removebg-preview.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuentes - Plantéatelo</title>
+    <link rel="stylesheet" href="CSS Planteatelo.css">
+
+    <style>
+        .fuentes-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .fuentes-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .fuentes-list li {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .fuentes-list li:last-child {
+            border-bottom: none;
+        }
+
+        .fuentes-list h3 {
+            color: #2e4732;
+            margin-bottom: 0.5rem;
+        }
+
+        .fuentes-list a {
+            color: #6b8e6b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .fuentes-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
-  <header class="header">
-    <div class="logo">Plantéatelo</div>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="Ecotips.html">Ecotip</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="Diadia.html">Día a día</a></li>
-        <li><a href="checklist.html">Checklist</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="fuentes.html">Fuentes</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-<section class="titulo1">
+    <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo.png"></a>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="overlay"></div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ecotip.html">Ecotip</a></li>
+                <li><a href="formulario.html">Publicar Noticia</a></li>
+                <li><a href="dia-a-dia.html">Día a día</a></li>
+                <li><a href="checklist.html">Checklist</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="fuentes.html">Fuentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html" id="nav-login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <img class="imagen-ecotip" src="C:\Users\Usuario\OneDrive\Escritorio\fotos planteatelo\imagen1.png"alt="imagen arboles inicial" width="410">
+    <div class="welcome">
+        <h1>Fuentes y Recursos</h1>
+        <p>Aprende más sobre sostenibilidad con nuestra selección de lecturas y webs recomendadas.</p>
+    </div>
 
-    <h1>Fuentes de interés</h1>
-    <p>En esta sección encontrarás una selección de recursos y enlaces de interés relacionados con el medio ambiente y la sostenibilidad. Cada enlace te llevará a sitios externos donde podrás profundizar en temas específicos, descubrir investigaciones, iniciativas, herramientas y organizaciones que trabajan por un planeta más saludable. Pulsa sobre cada enlace para acceder directamente a la fuente y ampliar tu conocimiento sobre las áreas que más te interesen. Nuestro objetivo es facilitarte acceso a información fiable y útil, para que puedas explorar más allá de nuestras noticias y consejos, y mantenerte siempre informado y conectado con el mundo ambiental.</p>
-  </section>
+    <div class="fuentes-container">
+        <ul class="fuentes-list">
+            <li>
+                <h3>National Geographic España - Medio Ambiente</h3>
+                <p>Noticias, reportajes y fotografías sobre la naturaleza y el cambio climático.</p>
+                <a href="https://www.nationalgeographic.com.es/medio-ambiente" target="_blank">Visitar sitio web</a>
+            </li>
+            <li>
+                <h3>Ecoticias</h3>
+                <p>El periódico verde. Información actualizada sobre energías renovables y ecología.</p>
+                <a href="https://www.ecoticias.com/" target="_blank">Visitar sitio web</a>
+            </li>
+            <li>
+                <h3>Greenpeace España</h3>
+                <p>Organización ecologista y pacifista internacional económica y políticamente independiente.</p>
+                <a href="https://es.greenpeace.org/es/" target="_blank">Visitar sitio web</a>
+            </li>
+            <li>
+                <h3>WWF España</h3>
+                <p>Una de las mayores organizaciones internacionales independientes dedicadas a la conservación de la
+                    naturaleza.</p>
+                <a href="https://www.wwf.es/" target="_blank">Visitar sitio web</a>
+            </li>
+        </ul>
+    </div>
 
-  <div class="tarjeta-fuentes">
-    <h2>Articulo-link-video-etc</h2>
-    <p>breve explicación de lo que verán y link</p>
-  </div>
+    <footer>
+        <p>&copy; 2026 Plantéatelo. Todos los derechos reservados.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

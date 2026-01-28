@@ -1,118 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plantéatelo</title>
-  <link rel="stylesheet" href="CSS Planteatelo.css">
+    <meta charset="UTF-8">
+    <link rel="icon" href="logo/Captura_de_pantalla_2026-01-28_201021-removebg-preview.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Ecológico - Plantéatelo</title>
+    <link rel="stylesheet" href="CSS Planteatelo.css">
+
+    <style>
+        .checklist-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-right: 15px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .checklist-item label {
+            font-size: 1.1rem;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .checklist-item.completed label {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #6b8e6b;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            margin-top: 5px;
+            font-weight: bold;
+            color: #2e4732;
+        }
+    </style>
 </head>
 
 <body>
+    <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo.png"></a>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="overlay"></div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ecotip.html">Ecotip</a></li>
+                <li><a href="formulario.html">Publicar Noticia</a></li>
+                <li><a href="dia-a-dia.html">Día a día</a></li>
+                <li><a href="checklist.html">Checklist</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="fuentes.html">Fuentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html" id="nav-login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header class="header">
-    <div class="logo">Plantéatelo</div>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="Ecotips.html">Ecotip</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="Diadia.html">Día a día</a></li>
-        <li><a href="checklist.html">Checklist</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="fuentes.html">Fuentes</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="titulo1">
-    <img class="imagen-ecotip" src="C:\Users\Usuario\OneDrive\Escritorio\fotos planteatelo\imagen1.png" alt="imagen arboles inicial" width="410">
-
-    <h1>Checklists</h1>
-    <p class="justificado">
-      Pequeñas acciones diarias pueden generar un gran impacto en el cuidado del planeta.
-      En este apartado puedes crear tu propia lista de objetivos diarios para adoptar hábitos
-      más sostenibles, de forma sencilla y a tu ritmo. Marca las acciones que completes cada día,
-      añade nuevos retos y conviértete en parte activa del cambio hacia un futuro más responsable
-      con el medioambiente.
-    </p>
-  </section>
-
-        <div class="check">
-
-    <input type="text" class="escribir" placeholder="Escribe aquí tu título">
-
-    <div class="item">
-      <input type="checkbox" class="marcar">
-      <input type="text" class="escribir" placeholder="Escribe aquí tus EcoMetas">
+    <div class="welcome">
+        <h1>Tu Checklist Sostenible</h1>
+        <p>Marca las acciones que ya realizas y ponte nuevas metas.</p>
     </div>
 
-    <div class="item">
-      <input type="checkbox" class="marcar">
-      <input type="text" class="escribir" placeholder="Escribe aquí tus EcoMetas">
+    <div class="checklist-container">
+        <div class="checklist-item">
+            <input type="checkbox" id="check1">
+            <label for="check1">Uso bolsas de tela reutilizables</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="check2">
+            <label for="check2">Tengo mi propia botella de agua</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="check3">
+            <label for="check3">Separo la basura para reciclar</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="check4">
+            <label for="check4">Apago las luces al salir de una habitación</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="check5">
+            <label for="check5">Compro productos locales y de temporada</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="check6">
+            <label for="check6">Evito los plásticos de un solo uso</label>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text" id="progressText">0% Completado</div>
     </div>
 
-    <div class="item">
-      <input type="checkbox" class="marcar">
-      <input type="text" class="escribir" placeholder="Escribe aquí tus EcoMetas">
-    </div>
+    <footer>
+        <p>&copy; 2026 Plantéatelo. Todos los derechos reservados.</p>
+    </footer>
 
-    <div class="item">
-      <input type="checkbox" class="marcar">
-      <input type="text" class="escribir" placeholder="Escribe aquí tus EcoMetas">
-    </div>
+    <script src="app.js"></script>
+    <script>
+        const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
 
-    <div class="item">
-      <input type="checkbox" class="marcar">
-      <input type="text" class="escribir" placeholder="Escribe aquí tus EcoMetas">
-    </div>
+        function updateProgress() {
+            const total = checkboxes.length;
+            const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+            const percent = Math.round((checked / total) * 100);
 
-  </div>
+            progressFill.style.width = `${percent}%`;
+            progressText.textContent = `${percent}% Completado`;
 
+            checkboxes.forEach(cb => {
+                const item = cb.parentElement;
+                if (cb.checked) {
+                    item.classList.add('completed');
+                } else {
+                    item.classList.remove('completed');
+                }
+            });
 
+            // Simple local storage persistence
+            localStorage.setItem('ecoChecklist', JSON.stringify(Array.from(checkboxes).map(cb => cb.checked)));
+        }
 
- <div class="check">
+        // Load saved state
+        const saved = JSON.parse(localStorage.getItem('ecoChecklist'));
+        if (saved) {
+            checkboxes.forEach((cb, i) => {
+                cb.checked = saved[i];
+            });
+        }
 
-    <input type="text" class="escribir" placeholder="Escribe aquí tu título">
-
-    <div class="item">
-      <input type="checkbox" class="marcar">
-      <input type="text" class="escribir" placeholder="Escribe aquí tus EcoMetas">
-    </div>
-
-    <div class="item">
-      <input type="checkbox" class="marcar">
-      <input type="text" class="escribir" placeholder="Escribe aquí tus EcoMetas">
-    </div>
-
-    <div class="item">
-      <input type="checkbox" class="marcar">
-      <input type="text" class="escribir" placeholder="Escribe aquí tus EcoMetas">
-    </div>
-
-    <div class="item">
-      <input type="checkbox" class="marcar">
-      <input type="text" class="escribir" placeholder="Escribe aquí tus EcoMetas">
-    </div>
-
-    <div class="item">
-      <input type="checkbox" class="marcar">
-      <input type="text" class="escribir" placeholder="Escribe aquí tus EcoMetas">
-    </div>
-
-  </div>
-
-
-  <section class="extra">
-    <h2>VUELVE A TUS CHECKLISTS CUANDO QUIERAS</h2>
-    <p>Suscríbete y completa todos tus ecobjetivos.</p>
-    <a href="suscripcion.html" class="cta">SUSCRÍBETE</a>
-</section>
-
-  <footer>
-    <p>Plantéatelo: piensa hoy, cuida mañana.</p>
-  </footer>
-
-
+        checkboxes.forEach(cb => cb.addEventListener('change', updateProgress));
+        updateProgress(); // Initial update
+    </script>
 </body>
+
 </html>

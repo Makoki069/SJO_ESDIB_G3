@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="logo/Captura_de_pantalla_2026-01-28_201021-removebg-preview.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style-upload.css" />
+  <link rel="stylesheet" href="CSS Planteatelo.css" />
+
+  <title>Noticias Ecología</title>
+  <style>
+    .pet-item {
+      margin-bottom: 14px;
+    }
+
+    .pet-header {
+      margin-bottom: 2px;
+      font-weight: bold;
+    }
+
+    .pet-photos {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 6px 0 0 0;
+      padding: 0;
+    }
+
+    .pet-photos img {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    .pet-actions button {
+      margin-left: 8px;
+    }
+
+    .muted {
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .news-content {
+      margin: 6px 0;
+      color: #444;
+    }
+
+    .news-meta {
+      font-size: 0.85em;
+      color: #777;
+      margin-top: 4px;
+    }
+
+    .title {
+      color: #6b8e6b;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo"><img src="img/logo.png"></a>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="overlay"></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="ecotip.html">Ecotip</a></li>
+        <li><a href="formulario.html">Publicar Noticia</a></li>
+        <li><a href="dia-a-dia.html">Día a día</a></li>
+        <li><a href="checklist.html">Checklist</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="fuentes.html">Fuentes</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html" id="nav-login-btn">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main_container" id="main_content">
+    <div class="title">PUBLICAR NOTICIA DE ECOLOGÍA</div>
+    <div class="formulario">
+      <form id="alta_pet">
+        <div class="input_container">
+          <label>Título *</label>
+          <input type="text" name="title" id="title" placeholder="Título de la noticia" autocomplete="off" required>
+        </div>
+        <div class="input_container">
+          <label>Contenido *</label>
+          <textarea cols="22" rows="6" name="content" id="content" placeholder="Escribe el contenido de la noticia..."
+            autocomplete="off" required></textarea>
+        </div>
+        <div class="input_container">
+          <label>Autor</label>
+          <input type="text" name="author" id="author" placeholder="Nombre del autor" autocomplete="off">
+        </div>
+        <div class="input_container">
+          <label>Fecha de Publicación</label>
+          <input type="date" name="date" id="date" autocomplete="off">
+        </div>
+        <div class="input_container">
+          <label>Categoría</label>
+          <select name="category" id="category">
+            <option value="">Selecciona una categoría</option>
+            <option value="Medio Ambiente">Medio Ambiente</option>
+            <option value="Reciclaje">Reciclaje</option>
+            <option value="Energía Renovable">Energía Renovable</option>
+            <option value="Conservación">Conservación</option>
+            <option value="Cambio Climático">Cambio Climático</option>
+            <option value="Biodiversidad">Biodiversidad</option>
+            <option value="Sostenibilidad">Sostenibilidad</option>
+            <option value="Agua">Agua</option>
+            <option value="Contaminación">Contaminación</option>
+          </select>
+        </div>
+        <div class="input_container">
+          <label>Imágenes</label>
+          <input type="file" name="file" id="files" accept="image/*" multiple>
+        </div>
+
+        <div class="input_container_button">
+          <button id="upload-button" type="submit"><label>PUBLICAR</label></button>
+          <button id="cancel-edit" type="button" style="display:none; margin-left:8px;">Cancelar edición</button>
+        </div>
+      </form>
+
+      <h2>Noticias Publicadas</h2>
+      <ul id="pets-list"></ul>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+
+</html>

@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plantéatelo</title>
-  <link rel="stylesheet" href="CSS Planteatelo.css">
+    <meta charset="UTF-8">
+    <link rel="icon" href="logo/Captura_de_pantalla_2026-01-28_201021-removebg-preview.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Plantéatelo</title>
+    <link rel="stylesheet" href="CSS Planteatelo.css">
+    <link rel="stylesheet" href="style-upload.css"> <!-- Reuse style-upload for form styling -->
+
 </head>
+
 <body>
-  <header class="header">
-    <div class="logo">Plantéatelo</div>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="Ecotips.html">Ecotip</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="Diadia.html">Día a día</a></li>
-        <li><a href="checklist.html">Checklist</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="fuentes.html">Fuentes</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo.png"></a>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="overlay"></div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ecotip.html">Ecotip</a></li>
+                <li><a href="formulario.html">Publicar Noticia</a></li>
+                <li><a href="dia-a-dia.html">Día a día</a></li>
+                <li><a href="checklist.html">Checklist</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="fuentes.html">Fuentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html" id="nav-login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <img class="imagen-header" src="C:\Users\Usuario\OneDrive\Escritorio\fotos planteatelo\imagen1.png"alt="imagen arboles inicial" width="410">
+    <div class="main_container">
+        <div class="title" style="color: #2e4732; text-shadow: none;">CONTACTA CON NOSOTROS</div>
+        <div class="formulario">
+            <form id="contact-form">
+                <div class="input_container" style="margin-bottom: 15px;">
+                    <label>Nombre</label>
+                    <input type="text" name="name" placeholder="Tu nombre" required>
+                </div>
+                <div class="input_container" style="margin-bottom: 15px;">
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                <div class="input_container" style="margin-bottom: 15px;">
+                    <label>Mensaje</label>
+                    <textarea cols="22" rows="6" name="message" placeholder="¿En qué podemos ayudarte?"
+                        required></textarea>
+                </div>
 
- 
-    <section class="welcome">
-    <section class="noticias-header">
-  <h1>Contáctanos</h1>
-  <a href="suscripcion.html" class="cta">ÚNETE</a>
-</section>
+                <div class="input_container_button">
+                    <button id="upload-button" type="submit"><label>ENVIAR</label></button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-<p>Explora las últimas noticias y novedades sobre medio ambiente y sostenibilidad. Cada tarjeta que ves representa un artículo completo: solo tienes que pulsar encima para leerlo y mantenerte informado sobre los temas que realmente importan, desde la conservación de la biodiversidad hasta la lucha contra el cambio climático. Nuestro objetivo es acercarte información veraz y actualizada de manera clara y accesible, para que puedas estar al día y tomar conciencia de los desafíos y avances que afectan a nuestro planeta. No te pierdas nada: cada clic te conecta con un mundo de conocimiento y acción ambiental.</p>
+    <footer>
+        <p>&copy; 2026 Plantéatelo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+            this.reset();
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
